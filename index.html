@@ -1,981 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosic</title>
-    <link rel="icon" type="images/x-icon" href="images/favicon.ico">
-    <!-- remix icon  -->
-    <link rel="stylesheet" href="css/remixicon.css">
-    <!-- bootstrap  -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <meta charset="UTF-8">
+  <title>Real Estate Landing Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<body data-bs-spy="scroll" data-bs-target="#navbarCollapse">
-    <div class="modal fade" id="exampleModal">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-body p-0">
-                    <div class="ratio ratio-16x9">
-                        <video id="VisaChipCardVideo" class="video-box" controls>
-                            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!-- ================= HEADER ================= -->
+<header class="header">
+  <div class="container nav">
+    <div class="logo">REAL<span>ESTATE</span></div>
+
+    <nav class="nav-links" id="navMenu">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn">
+      <i class="ri-menu-3-line"></i>
+    </button>
+  </div>
+</header>
+
+<!-- ================= HERO / CAROUSEL ================= -->
+<section class="hero" id="home">
+  <div class="slides">
+    <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1568605114967-8130f3a36994')"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c')"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1605276373954-0c4a0dac5b12')"></div>
+  </div>
+
+  <div class="hero-content">
+    <h1>Your Dream Property Awaits</h1>
+    <p>Modern homes • Prime locations • Smart investments</p>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="section about" id="about">
+  <div class="container grid">
+    <img src="https://images.unsplash.com/photo-1572120360610-d971b9b78825" alt="About Image">
+    <div>
+      <h2>About Us</h2>
+      <p>
+        We specialize in residential and commercial real estate, helping
+        clients buy, sell, and invest with confidence and clarity.
+      </p>
     </div>
-    <!-- nav-bar start  -->
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-custom sticky sticky-light" id="navbar">
-            <div class="container">
-                <div class="navbar-brand logo">
-                    <a class="navbar-caption fs-4 text-dark ls-1 fw-bold" href="#!">
-                        <img src="images/logo.png" alt="" height="40" class="logo-dark">
-                        <img src="images/logo-light.png" alt="" height="40" class="logo-light">
-                    </a>
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="fw-bold text-primary fs-4"><i class="ri-menu-5-line"></i></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav mx-auto" id="navbar-navlist">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#home">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#features">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#price">Price</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#service">Service</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#blog">Blog</a>
-                        </li>
-                    </ul>
-                    <div>
-                        <a href="login.html" class="btn btn-outline-primary me-2">Log in</a>
-                        <a href="signup.html" class="btn btn-primary">Sign up</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <!-- nav-bar end  -->
+  </div>
+</section>
+<!-- ================= SERVICES ================= -->
+<section class="section services" id="services">
+  <div class="container">
+    <h2 class="center">Our Services</h2>
 
-    <!-- start home -->
-    <section class="home-10 home-section vh-100" id="home">
-        <div class="container">
-            <div class="row align-items-center position-relative">
-                <div class="col-xl-6 col-sm-12 order-1 order-lg-0 align-self-center">
-                    <div class="hero-content mb-4">
-                        <span class="badge  text-white mb-3 text-uppercase">One The Best Solution</span>
-                        <h1 class="display-5 lh-base  fw-bold text-white">Trusting Us is The Same Way to Your Successful</h1>
-                        <p class="lh-lg mb-2 py-2 text-white">Trending,Clean and Elegant Design based on deeply research with powerful features.</p>
-                    </div>
+    <div class="service-grid">
+      <div class="service-card">
+        <i class="ri-home-4-line"></i>
+        <h3>Property Sales</h3>
+        <p>Buying and selling residential and commercial properties.</p>
+      </div>
 
-                    <div>
-                        <a href="#" class="me-2">
-                            <img src="images/app-store.png" alt="" class="mb-2" height="50">
-                        </a>
+      <div class="service-card">
+        <i class="ri-building-line"></i>
+        <h3>Property Management</h3>
+        <p>Complete management services for landlords.</p>
+      </div>
 
-                        <a href="#">
-                            <img src="images/google-play.png" alt="" height="50">
-                        </a>
-                    </div>
-                    <!-- end col -->
-                </div>
-                <!-- end col -->
-                <div class="col-xl-6 align-self-center order-0 order-lg-1">
-                    <div class="text-center">
-                        <img src="images/h1.png" alt="" class="phone-img">
-                    </div>
-                </div>
-            </div>
-            <!-- end row -->
-        </div>
-        <!-- END CONTAINER -->
-    </section>
-    <!-- end home -->
+      <div class="service-card">
+        <i class="ri-line-chart-line"></i>
+        <h3>Investment Consulting</h3>
+        <p>Smart strategies to grow your real estate portfolio.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section class="section pt-5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="text-center mb-5">
-                        <h2 class="mb-4 fw-semibold">The fastest growing Companies use Nosic </h2>
-                    </div>
-                </div>
-            </div>
-            <!-- end row -->
+<!-- ================= FAQ ================= -->
+<section class="section faq" id="faq">
+  <div class="container">
+    <h2 class="center">Frequently Asked Questions</h2>
 
-            <div class="row justify-content-center">
-                <div class="col-lg-2 col-md-6 g-3">
-                    <img src="images/logo/logo-01.png" alt="" height="45">
-                </div>
-                <div class="col-lg-2 col-md-6 g-3">
-                    <img src="images/logo/logo-02.png" alt="" height="43">
-                </div>
-                <div class="col-lg-2 col-md-6 g-3">
-                    <img src="images/logo/logo-03.png" alt="" height="45">
-                </div>
-                <div class="col-lg-2 col-md-6 g-3">
-                    <img src="images/logo/logo-04.png" alt="" height="45">
-                </div>
-                <div class="col-lg-2 col-md-6 g-3">
-                    <img src="images/logo/logo-05.png" alt="" height="45">
-                </div>
-                <div class="col-lg-2 col-md-6 g-3">
-                    <img src="images/logo/logo-06.png" alt="" height="45">
-                </div>
-            </div>
-            <!-- end  row -->
-        </div>
-    </section>
-
-    <!-- start services -->
-    <section class="section bg-services pt-5" id="service">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-9">
-                    <div class="text-center">
-                        <span class="badge bg-primary-subtle text-primary mb-3">SERVICES</span>
-                        <h2 class="fw-semibold mb-3 mt-2">We're a small team of storytellers, thinkers and problem solvers.</h2>
-                        <p class="text-muted mb-5">We help your company to reflect its true self through tone of voice, copywriting and storytelling.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- end row -->
-
-            <div class="row mt-4">
-                <div class="col-xl-3 col-md-6 g-4">
-                    <div class="card service-card border-0">
-                        <div class="card-body">
-                            <div>
-                                <div class="service-icon">
-                                    <i class="ri-window-line fs-3 align-middle text-primary"></i>
-                                </div>
-                                <h5 class="fw-semibold mb-3 mt-4">Software Development</h5>
-                                <p class="text-muted mb-4">We help your company to reflect its true self through tone of voice</p>
-
-                                <a href="#"> Explore More <i class="ri-arrow-right-line"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end col -->
-                <div class="col-xl-3 col-md-6 g-4">
-                    <div class="card service-card border-0">
-                        <div class="card-body">
-                            <div>
-                                <div class="service-icon">
-                                    <i class="ri-lightbulb-line fs-3 align-middle text-primary"></i>
-                                </div>
-                                <h5 class="fw-semibold mt-4 mb-3">UI/UX Design</h5>
-                                <p class="text-muted mb-4">We help your company to reflect its true self through tone of voice</p>
-
-                                <a href="#"> Explore More <i class="ri-arrow-right-line"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end col -->
-
-                <div class="col-xl-3 col-md-6 g-4">
-                    <div class="card service-card border-0">
-                        <div class="card-body">
-                            <div>
-                                <div class="service-icon">
-                                    <i class="ri-rocket-line fs-3 align-middle text-primary"></i>
-                                </div>
-                                <h5 class="fw-semibold mb-3 mt-4">Startup Business</h5>
-                                <p class="text-muted mb-4">We help your company to reflect its true self through tone of voice</p>
-                                <a href="#">Explore More <i class="ri-arrow-right-line"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end col -->
-
-                <div class="col-xl-3 col-md-6 g-4">
-                    <div class="card service-card border-0">
-                        <div class="card-body">
-                            <div>
-                                <div class="service-icon">
-                                    <i class="ri-pages-line fs-3 align-middle text-primary"></i>
-                                </div>
-                                <h5 class="fw-semibold mb-3 mt-4">Project Management</h5>
-                                <p class="text-muted mb-4">We help your company to reflect its true self through tone of voice</p>
-
-                                <a href="#"> Explore More <i class="ri-arrow-right-line"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end col -->
-            </div>
-        </div>
-    </section>
-    <!-- end services -->
-
-    <!-- start features -->
-    <section class="section bg-features" id="features">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div>
-                        <img src="images/features.png" alt="" class="rounded-4 img-fluid" height="400">
-                    </div>
-                </div>
-                <div class="col-lg-6 align-self-center g-4">
-                    <div>
-                        <span class="badge bg-primary-subtle text-primary mb-3">FEATURES</span>
-                        <h1 class="fw-semibold mb-3 mt-2">What is our difference with others?</h1>
-                        <p>We believe you are still doing manual employee managment, etc. For that we are here to help your work to be more efficient and save your time at work.</p>
-
-                        <div class="accordion" id="accordionExample">
-                            <div class="accordion-item mb-4">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        <div class="bg-warning-subtle px-2 py-1 me-3 rounded ">
-                                            <i class="ri-tablet-fill text-warning fs-4"></i>
-                                        </div>
-                                        Device integrated features
-                                    </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p>We use Product UI/UX Motion to the Interaction design to craft products that makes better solutions.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item mb-4">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        <div class="bg-primary-subtle px-2 py-1 me-3 rounded ">
-                                            <i class="ri-bar-chart-box-fill text-primary fs-4"></i>
-                                        </div>
-                                        Detailed statistics
-                                    </button>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p>We use Product UI/UX Motion to the Interaction design to craft products that makes better solutions.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        <div class="bg-success-subtle px-2 py-1 me-3 rounded ">
-                                            <i class="ri-list-check text-success fs-4"></i>
-                                        </div>
-                                        Easy to Organise everything
-                                    </button>
-                                </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p>We use Product UI/UX Motion to the Interaction design to craft products that makes better solutions.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- end  features-->
-
-    <!-- start blog -->
-    <section class="section pb-0 bg-blog" id="blog">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-9">
-                    <div class="text-center mb-5">
-                        <span class="badge bg-primary-subtle text-primary mb-3">BLOG</span>
-                        <h2 class="fw-semibold my-2">Employee Management is more efficient and saves energy to do other things</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class=" card border-0 rounded-4">
-                        <div class="d-flex justify-content-center">
-                            <img src="images/blog/img-1.png" alt="" class="rounded-3 blog-img">
-                        </div>
-                        <div class="card-body p-4">
-                            <div>
-                                <h5 class="fw-semibold">Attendance control from anywhere and anytime</h5>
-                                <p>Stuck in traffic on the way to work? Access from anywhere to control your employees </p>
-
-                                <a href="#" class="text-primary">Read more <i class="ri-arrow-right-line"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end col -->
-
-                <div class="col-lg-4">
-                    <div class="card border-0 rounded-4">
-                        <div class="d-flex justify-content-center">
-                            <img src="images/blog/img-3.png" alt="" class="rounded-3 blog-img">
-                        </div>
-                        <div class="card-body p-4">
-                            <div>
-                                <h5 class="fw-semibold">Control incoming and completed projects</h5>
-                                <p>Compile and filter incoming and completed projects in seconds</p>
-                                <a href="#" class="text-primary">Read more <i class="ri-arrow-right-line"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end col -->
-
-                <div class="col-lg-4">
-                    <div class="card border-0  rounded-4">
-                        <div class="d-flex justify-content-center">
-                            <img src="images/blog/img-2.png" alt="" class="rounded-3 blog-img">
-                        </div>
-                        <div class="card-body p-4">
-                            <div>
-                                <h5 class="fw-semibold">Arrange meeting schedules with vendors,clients,etc.</h5>
-                                <p>Set a meeting schedule on your smartphone and the application will record it</p>
-                                <a href="#" class="text-primary">Read more <i class="ri-arrow-right-line"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end col -->
-            </div>
-        </div>
-    </section>
-    <!-- end blog -->
-
-    <!-- start about -->
-    <section class="section bg-about pb-0 " id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 align-self-center">
-                    <div class="about-img text-center">
-                        <img src="images/about.png" alt="" class="img-fluid">
-                    </div>
-                </div>
-                <!-- end col -->
-
-                <div class="col-lg-5 offset-lg-1 align-self-center">
-                    <div>
-                        <span class="badge bg-primary-subtle text-primary mb-2">ABOUT US</span>
-                        <h1 class="heading-title lh-base fw-semibold mt-2 mb-3">Our Vision is to Build Successful <span class="text-primary">Business Solution</span>.</h1>
-
-                        <p class="text-muted">A well structured development process is crucial for creating products that people love. Coletiv has a strict development process that includes test driven development.</p>
-
-                        <a href="#" class="btn btn-primary mt-4">Read More <i class="ri-arrow-right-line"></i></a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section class="about-bg" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 align-self-center">
-                    <div>
-                        <span class="badge bg-primary-subtle text-primary mb-2">OUR GOALS</span>
-                        <h1 class="heading-title lh-base fw-semibold mt-2 mb-3">Consult Our experts about your <span class="text-primary">Project for free</span>.</h1>
-
-                        <p class="text-muted lh-base ">We have successfully developed many projects, including blogs, publishing and talent management platforms, e-commerce sites, travel agencies, a HIPAA compliant web app and a non-profit contest platform.</p>
-
-                        <a href="#" class="btn btn-primary mt-4">Read More <i class="ri-arrow-right-line"></i></a>
-                    </div>
-                </div>
-                <!-- end col -->
-                <div class="col-lg-6 offset-lg-1 align-self-center">
-                    <div>
-                        <img src="images/about-2.png" alt="" class="img-fluid">
-                    </div>
-                </div>
-                <!-- end col -->
-            </div>
-        </div>
-    </section>
-    <!-- end about -->
-
-    <!-- start integration-->
-    <section class="section pb-0 bg-integration">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 order-1 order-lg-0  align-self-center">
-                    <div>
-                        <span class="badge bg-primary-subtle text-primary mb-3">INTEGRATION</span>
-                        <h1 class="mb-4 fw-semibold lh-base">Integrates with all your <span class="text-primary h1">Favourite tools</span> get along with others.</h1>
-
-                        <p>Identify qualified leads, high value oppertunities, and potential churn risks with our advanced sales analytics tools.</p>
-                        <a href="#" class="btn btn-primary mt-3">Learn more <i class="ri-arrow-right-line"></i></a>
-                    </div>
-                </div>
-                <!-- end col -->
-                <div class="col-lg-6 offset-lg-1 order-0 order-lg-1  align-self-center">
-                    <div>
-                        <img src="images/integration.png" alt="" class="integration-img">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- end  integration-->
-
-    <!-- start pricing -->
-    <section class="section bg-pricing" id="price">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="text-center mb-5">
-                        <span class="badge bg-primary-subtle text-primary mb-3">OUR PRICING</span>
-                        <h2 class="fw-semibold my-2">Affordable Pricing Plans</h2>
-                        <p>Get attractive offers this month, start your employee management easily!</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row g-4 mt-3">
-                <div class="col-lg-4 col-md-6">
-                    <div class="card pricing-card h-100">
-                        <div class="card-body p-4">
-                            <div class="mb-4">
-                                <h4 class="card-title fw-semibold">Basic plan</h4>
-                                <p>Our Most Basic Plan</p>
-                                <h1>$ 29<span class="fs-6 text-muted"> / Month</span></h1>
-                            </div>
-                            <div class="price-info text-start my-4">
-                                <h6 class="mb-3">Task management with:</h6>
-                                <ul>
-                                    <li class="mt-3 text-muted"><i class="ri-checkbox-circle-fill text-success me-4 fs-5 rounded-circle align-middle shadow-sm"></i>
-                                        Up to 3 projects
-                                    </li>
-                                    <li class="mt-3 text-muted"><i class="ri-checkbox-circle-fill text-success me-4
-                                                                 fs-5 rounded-circle align-middle shadow-sm"></i>Unlimited project members
-                                    </li>
-                                    <li class="mt-3 text-muted"><i class="ri-checkbox-circle-fill text-success   me-4
-                                                                 fs-5 rounded-circle align-middle shadow-sm"></i>Customizable project boards
-                                    </li>
-                                    <li class="mt-3 text-muted"><i class="ri-checkbox-circle-fill text-success me-4
-                                                                 fs-5 rounded-circle align-middle shadow-sm"></i>Community support
-                                    </li>
-                                    <li class="mt-3 text-muted"><i class="ri-checkbox-circle-fill text-success me-4
-                                                                 fs-5 rounded-circle align-middle shadow-sm"></i>Multiple team members
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="mt-4">
-                                <a href="javascript:void(0)" class="btn btn-primary w-100">Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- end col-->
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="card pricing-card h-100 bg-primary">
-                        <div class="card-body p-4">
-                            <div class="positin-relative">
-                                <span class="lable-name text-uppercase">Popular</span>
-                            </div>
-                            <div class="mb-4">
-                                <h4 class="card-title fw-semibold text-white">Pro plan</h4>
-                                <p class="text-white">Best For Growing Teams</p>
-                                <h1 class="text-white">$ 39<span class="fs-6 text-white"> / Month</span></h1>
-                            </div>
-                            <div class="price-info text-start my-4">
-                                <h6 class="mb-3 text-white">Task management with:</h6>
-                                <ul>
-                                    <li class="mt-3 text-white"><i class="ri-checkbox-circle-fill text-success me-4 fs-5 rounded-circle align-middle shadow-sm"></i>
-                                        Up to 3 projects
-                                    </li>
-                                    <li class="mt-3 text-white"><i class="ri-checkbox-circle-fill text-success me-4
-                                                                                 fs-5 rounded-circle align-middle shadow-sm"></i>Unlimited project members
-                                    </li>
-                                    <li class="mt-3 text-white"><i class="ri-checkbox-circle-fill text-success   me-4
-                                                                                 fs-5 rounded-circle align-middle shadow-sm"></i>Customizable project boards
-                                    </li>
-                                    <li class="mt-3 text-white"><i class="ri-checkbox-circle-fill text-success me-4
-                                                                                 fs-5 rounded-circle align-middle shadow-sm"></i>Community support
-                                    </li>
-                                    <li class="mt-3 text-white"><i class="ri-checkbox-circle-fill text-success me-4
-                                                                                 fs-5 rounded-circle align-middle shadow-sm"></i>Multiple team members
-                                    </li>
-                                    <!-- <li class="mt-3 text-muted"><i class="ri-checkbox-circle-fill text-success me-4 fs-5 rounded-circle align-middle shadow-sm"></i>Private projects
-                                    </li>
-                                    <li class="mt-3 text-muted"><i class="ri-checkbox-circle-fill text-success me-4
-                                                                                                                     fs-5 rounded-circle align-middle shadow-sm"></i>Statistics and reports
-                                    </li>
-                                    <li class="mt-3 text-muted"><i class="ri-checkbox-circle-fill text-success me-4 fs-5 rounded-circle align-middle shadow-sm"></i>Priority email & phone support
-                                    </li> -->
-                                </ul>
-                            </div>
-                            <div class="mt-4">
-                                <a href="javascript:void(0)" class="btn btn-light w-100">Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- end col-->
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="card pricing-card h-100">
-                        <div class="card-body p-4">
-                            <div class="mb-4">
-                                <h4 class="card-title fw-semibold">Professional plan</h4>
-                                <p>Best For Larger Teams.</p>
-                                <h1>$ 99<span class="fs-6 text-muted"> / Month</span></h1>
-                            </div>
-                            <div class="price-info text-start my-4">
-                                <h6 class="mb-3">Task management with:</h6>
-                                <ul>
-                                    <li class="mt-3 text-muted"><i class="ri-checkbox-circle-fill text-success me-4 fs-5 rounded-circle align-middle shadow-sm"></i>
-                                        Up to 3 projects
-                                    </li>
-                                    <li class="mt-3 text-muted"><i class="ri-checkbox-circle-fill text-success me-4
-                                                                                                     fs-5 rounded-circle align-middle shadow-sm"></i>Unlimited project members
-                                    </li>
-                                    <li class="mt-3 text-muted"><i class="ri-checkbox-circle-fill text-success   me-4
-                                                                                                     fs-5 rounded-circle align-middle shadow-sm"></i>Customizable project boards
-                                    </li>
-                                    <li class="mt-3 text-muted"><i class="ri-checkbox-circle-fill text-success me-4
-                                                                                                     fs-5 rounded-circle align-middle shadow-sm"></i>Community support
-                                    </li>
-                                    <li class="mt-3 text-muted"><i class="ri-checkbox-circle-fill text-success me-4
-                                                                                                     fs-5 rounded-circle align-middle shadow-sm"></i>Multiple team members
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="mt-4">
-                                <a href="javascript:void(0)" class="btn btn-primary w-100">Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- end col-->
-            </div>
-        </div>
-    </section>
-    <!-- end pricing -->
-
-    <!-- START CLENT -->
-    <section class="section bg-testimonial" id="team">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="heading-box text-center mb-5">
-                        <span class="badge bg-primary-subtle text-primary mb-3">TESTIMONIAL</span>
-
-                        <h2 class="heading-title fw-semibold my-2">What Our Happy User Says</h2>
-                    </div>
-                </div>
-            </div>
-            <!-- end row -->
-
-            <div class="row">
-
-                <div #swiperRef="" class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide position-relative">
-                            <div class="card border-0 testimonial-card position-relative ">
-                                <div class="bg-light position-absolute  opacity-75  rounded-circle testimonial-icon">
-                                    <i class="ri-double-quotes-l text-muted fs-3 "></i>
-                                </div>
-                                <div class="card-body p-4">
-                                    <div class="d-flex gap-2 align-items-center mb-3">
-                                        <h6 class="fw-semibold mb-0">Great platform!</h6>
-                                        <div>
-                                            <i class="ri-star-fill text-warning"></i>
-                                            <i class="ri-star-fill text-warning"></i>
-                                            <i class="ri-star-fill text-warning"></i>
-                                            <i class="ri-star-fill text-warning"></i>
-                                            <i class="ri-star-fill text-warning"></i>
-                                        </div>
-                                    </div>
-                                    <p class="text-muted">What a platform! Very helpful for HR manager work in managing employees, etc. I highly recommend it to all of you! Good job Manager! Best! </p>
-                                    <hr class="text-muted">
-                                    <div class="d-flex gap-3 align-items-center">
-                                        <img src="images/user/img1.jpg" alt="" height="50" width="50" class="rounded-circle">
-                                        <div>
-                                            <h6 class="mb-1">Dracule Mihawk</h6>
-                                            <p class="mb-0">Full Stack developer</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-slide">
-                                <div class="card border-0 testimonial-card shadow">
-                                    <div class="bg-light position-absolute  opacity-75  rounded-circle testimonial-icon">
-                                        <i class="ri-double-quotes-l text-muted fs-3 "></i>
-                                    </div>
-                                    <div class="card-body p-4">
-                                        <div class="d-flex gap-2 align-items-center mb-3 ">
-                                            <h6 class="fw-semibold mb-0">Incredible! Love it!</h6>
-                                            <div>
-                                                <i class="ri-star-fill text-warning"></i>
-                                                <i class="ri-star-fill text-warning"></i>
-                                                <i class="ri-star-fill text-warning"></i>
-                                                <i class="ri-star-fill text-warning"></i>
-                                                <i class="ri-star-fill text-warning"></i>
-                                            </div>
-                                        </div>
-                                        <p class="text-muted text-left">What a platform! Very helpful for HR manager work in managing employees, etc. I highly recommend it to all of you! Good job Manager! Best! </p>
-                                        <hr class="text-muted">
-                                        <div class="d-flex gap-3 align-items-center">
-                                            <img src="images/user/img2.jpg" alt="" height="50" width="50" class="rounded-circle">
-                                            <div>
-                                                <h6 class="mb-1">Lord D. Buggy</h6>
-                                                <p class="mb-0">Web designer</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="card border-0 testimonial-card shadow">
-                                <div class="bg-light position-absolute  opacity-75  rounded-circle testimonial-icon">
-                                    <i class="ri-double-quotes-l text-muted fs-3 "></i>
-                                </div>
-                                <div class="card-body p-4">
-                                    <div class="d-flex gap-2 align-items-center mb-3 ">
-                                        <h6 class="fw-semibold mb-0">Best Work!</h6>
-                                        <div>
-                                            <i class="ri-star-fill text-warning"></i>
-                                            <i class="ri-star-fill text-warning"></i>
-                                            <i class="ri-star-fill text-warning"></i>
-                                            <i class="ri-star-fill text-warning"></i>
-                                            <i class="ri-star-fill text-warning"></i>
-                                        </div>
-                                    </div>
-                                    <p class="text-muted text-left">What a platform! Very helpful for HR manager work in managing employees, etc. I highly recommend it to all of you! Good job Manager! Best! </p>
-                                    <hr class="text-muted">
-                                    <div class="d-flex gap-3 align-items-center">
-                                        <img src="images/user/img-5.jpg" alt="" height="50" width="50" class="rounded-circle">
-                                        <div>
-                                            <h6 class="mb-1">Mark Smith</h6>
-                                            <p class="mb-0">Web developer</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="card border-0 testimonial-card shadow">
-                                <div class="bg-light position-absolute  opacity-75  rounded-circle testimonial-icon">
-                                    <i class="ri-double-quotes-l text-muted fs-3 "></i>
-                                </div>
-                                <div class="card-body p-4">
-                                    <div class="d-flex gap-2 align-items-center mb-3 ">
-                                        <h6 class="fw-semibold mb-0">Coding Skill!</h6>
-                                        <div>
-                                            <i class="ri-star-fill text-warning"></i>
-                                            <i class="ri-star-fill text-warning"></i>
-                                            <i class="ri-star-fill text-warning"></i>
-                                            <i class="ri-star-fill text-warning"></i>
-                                            <i class="ri-star-fill text-warning"></i>
-                                        </div>
-                                    </div>
-                                    <p class="text-muted text-left">What a platform! Very helpful for HR manager work in managing employees, etc. I highly recommend it to all of you! Good job Manager! Best! </p>
-                                    <hr class="text-muted">
-                                    <div class="d-flex gap-3 align-items-center">
-                                        <img src="images/user/img-4.jpg" alt="" height="50" width="50" class="rounded-circle">
-                                        <div>
-                                            <h6 class="mb-1">Andrew Rathore</h6>
-                                            <p class="mb-0">UI/UX designer</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="card border-0 testimonial-card shadow">
-                                <div class="bg-light position-absolute  opacity-75  rounded-circle testimonial-icon">
-                                    <i class="ri-double-quotes-l text-muted fs-3 "></i>
-                                </div>
-                                <div class="card-body p-4">
-                                    <div class="d-flex gap-2 align-items-center mb-3 ">
-                                        <h6 class="fw-semibold mb-0">Incredible! Love it!</h6>
-                                        <div>
-                                            <i class="ri-star-fill text-warning"></i>
-                                            <i class="ri-star-fill text-warning"></i>
-                                            <i class="ri-star-fill text-warning"></i>
-                                            <i class="ri-star-fill text-warning"></i>
-                                            <i class="ri-star-fill text-warning"></i>
-                                        </div>
-                                    </div>
-                                    <p class="text-muted text-left">What a platform! Very helpful for HR manager work in managing employees, etc. I highly recommend it to all of you! Good job Manager! Best! </p>
-                                    <hr class="text-muted">
-                                    <div class="d-flex gap-3 align-items-center">
-                                        <img src="images/user/img-6.jpg" alt="" height="50" width="50" class="rounded-circle">
-                                        <div>
-                                            <h6 class="mb-1">Burce Hardy</h6>
-                                            <p class="mb-0">Fronted developer</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination testimonial-pagination"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- END CLIENT -->
-
-    <!-- start cta -->
-    <section class="section overflow-hidden pt-0 ">
-        <div class="container bg-cta ps-5 rounded-5 overflow-hidden">
-            <div class="row position-relative">
-                <div class="col-lg-6 py-5 align-self-center">
-                    <div>
-                        <h1 class="text-white fw-semibold">Start managing your employee easily now</h1>
-                        <button class="btn btn-light mt-4">Get Started</button>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 pb-0 pt-5">
-                    <!-- <div class="bg-primary d-inline cta-icon">
-                                <i class="ri-video-fill fs-1 text-white"></i>
-                            </div> -->
-                    <div class="cta-img pt-4">
-                        <img src="images/cta.png" alt="" class="shadow">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- end cta-->
-
-    <!-- start contact -->
-    <section class="section bg-contact">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div>
-                        <div class="text-center mb-5 pb-4">
-                            <span class="badge bg-primary-subtle text-primary mb-3">CONTACT US</span>
-                            <h2 class="fw-semibold my-2">Get in touch <span class="text-primary">with us</span></h2>
-                            <p class="mb-0">Nor again is there anyone who loves or pursues or desires to obtain of itself but because occasionally occur.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end row -->
-
-            <div class="row">
-                <div class="col-lg-5">
-                    <div class="card  contact-card">
-                        <div class="card-body px-4 pb-4 pt-5">
-                            <div>
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="mb-3">
-                                            <label for="exampleInputname" class="form-label">First Name*</label>
-                                            <input type="text" class="form-control" id="exampleInputname" placeholder="First Name" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="mb-3">
-                                            <label for="exampleInputlastname" class="form-label">Last Name*</label>
-                                            <input type="text" class="form-control" id="exampleInputlastname" placeholder="Last Name" required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Email address*</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Address" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputSubject" class="form-label">Subject*</label>
-                                    <input type="text" class="form-control" id="exampleInputSubject" aria-describedby="emailHelp" placeholder="Subject" required>
-                                </div>
-                                <div class="mb-4">
-                                    <label for="exampleFormControlTextarea1" class="form-label">How can we help?*</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Message" required></textarea>
-                                </div>
-                                <div class="text-center">
-                                    <a href="#" class="btn btn-primary">Submit</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end col -->
-
-                <div class="col-lg-6 offset-lg-1 g-4">
-                    <div>
-                        <h2 class="fw-semibold">How can We help?</h2>
-                        <p class="text-muted">To learn more about Blucore's consulting services, please fill out the contact from and a member of the team will be in touch soon.</p>
-                        <div class="mt-5">
-                            <div class="accordion contact mt-5 " id="accordionExample">
-                                <div class="accordion-item mb-4">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                                            Job Seekers
-                                        </button>
-                                    </h2>
-                                    <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <p class="text-muted mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo ipsam reiciendis nobis voluptates recusandae non eaque a dolorem sit eveniet. Iste maxime eligendi in deserunt natus vel cumque odio vitae.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item mb-4">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                            Talent Consulting
-                                        </button>
-                                    </h2>
-                                    <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <p class="text-muted mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo ipsam reiciendis nobis voluptates recusandae non eaque a dolorem sit eveniet. Iste maxime eligendi in deserunt natus vel cumque odio vitae.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item mb-4">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                                            Workforce Management
-                                        </button>
-                                    </h2>
-                                    <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <p class="text-muted mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo ipsam reiciendis nobis voluptates recusandae non eaque a dolorem sit eveniet. Iste maxime eligendi in deserunt natus vel cumque odio vitae.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- end contact -->
-
-    <!-- start footer -->
-    <footer class="section footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-4 col-md-6">
-                    <div>
-                        <div class="mb-3">
-                            <img src="images/logo-light.png" alt="" height="35">
-                        </div>
-                        <h3 class="text-white">Do you need help anything?</h3>
-                        <p>Join to receive new updates,</p>
-                        <div class="mb-3 w-75 shadow-sm">
-                            <input type="email" class="form-control form-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email">
-                        </div>
-                        <button class="btn btn-primary" type="button" id="button-addon2">Subscribe</button>
-    
-                        <div class="footer-icon mb-4 mt-4">
-                            <div class="icon-link">
-                                <a href="#" class="icon-link-hover text-white"><i class="ri-facebook-fill bi"></i>
-                                </a>
-                            </div>
-                            <div class="icon-link">
-                                <a href="#" class="icon-link-hover text-white"><i class="ri-instagram-line bi"></i>
-                                </a>
-                            </div>
-                            <div class="icon-link">
-                                <a href="#" class="icon-link-hover text-white"><i class="ri-linkedin-box-fill bi"></i>
-                                </a>
-                            </div>
-                            <div class="icon-link">
-                                <a href="#" class="icon-link-hover text-white"><i class="ri-twitter-fill bi"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="col-xl-2 col-md-6">
-                    <div class="text-white">
-                        <h5 class="text-white mb-4">Company</h5>
-                        <ul>
-                            <li class="mb-2"><a href="#" class="text-white-50">About Us</a></li>
-                            <li class="mb-2"><a href="#" class="text-white-50">Career</a></li>
-                            <li class="mb-2"><a href="#" class="text-white-50">Blog</a></li>
-                            <li class="mb-2"><a href="#" class="text-white-50">Pricing</a></li>
-                        </ul>
-                    </div>
-                </div>
-    
-                <div class="col-xl-2 col-md-6">
-                    <div class="text-white">
-                        <h5 class="text-white mb-4">Product</h5>
-                        <ul>
-                            <li class="mb-2"><a href="#" class="text-white-50">Tranding</a></li>
-                            <li class="mb-2"><a href="#" class="text-white-50">Popular</a></li>
-                            <li class="mb-2"><a href="#" class="text-white-50">Features</a></li>
-                            <li class="mb-2"><a href="#" class="text-white-50">Customers</a></li>
-    
-                        </ul>
-                    </div>
-                </div>
-    
-                <div class="col-xl-2  col-md-6">
-                    <div class="text-white">
-                        <h5 class="text-white mb-4">Resources</h5>
-                        <ul>
-                            <li class="mb-2"><a href="#" class="text-white-50">About Us</a></li>
-                            <li class="mb-2"><a href="#" class="text-white-50">Contact</a></li>
-                            <li class="mb-2"><a href="#" class="text-white-50">Accounting</a></li>
-                        </ul>
-                    </div>
-                </div>
-    
-                <div class="col-xl-2 col-md-6">
-                    <div class="text-white">
-                        <h5 class="text-white mb-4">Contact Us</h5>
-                        <ul>
-                            <li class="mb-2"><a href="#" class="text-white-50"><i class="ri-mail-line me-2"></i>Themesdesign@gamil.com</a></li>
-                            <li class="mb-2"><a href="#" class="text-white-50"><i class="ri-phone-fill me-2"></i>+92 300-460-2595</a></li>
-                            <li class="mb-2"><a href="#" class="text-white-50"><i class="ri-map-pin-line me-2"></i>Colmbia US, New York</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- end footer -->
-
-    <div class="footer-copyright py-3 bg-dark">
-        <div class="copy-info text-center text-white-50">
-            <div class="copy-info text-center text-white-50">
-                ©
-                <script>document.write(new Date().getFullYear())</script> Nosic - Design by Themesdesign<a href="#" class="text-white-50 text-decoration-underline">
-                </a>
-            </div>
-        </div>
+    <div class="faq-item">
+      <button class="faq-question">How do I get started?</button>
+      <div class="faq-answer">
+        Contact us and our team will guide you through every step.
+      </div>
     </div>
 
+    <div class="faq-item">
+      <button class="faq-question">Do you offer rental management?</button>
+      <div class="faq-answer">
+        Yes, we provide full rental and property management services.
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/main.js"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
+<!-- ================= FOOTER ================= -->
+<footer class="footer" id="contact">
+  <div class="container footer-grid">
+    <div>
+      <h3>REAL ESTATE</h3>
+      <p>Professional real estate solutions you can trust.</p>
+    </div>
 
+    <div>
+      <h4>Quick Links</h4>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+    </div>
+
+    <div>
+      <h4>Contact</h4>
+      <p>Email: info@example.com</p>
+      <p>Phone: (000) 000-0000</p>
+    </div>
+  </div>
+</footer>
+
+<!-- SCROLL TO TOP -->
+<button class="scroll-top" id="scrollTop">
+  <i class="ri-arrow-up-line"></i>
+</button>
+
+<!-- JS -->
+<script src="script.js"></script>
 </body>
-
 </html>
