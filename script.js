@@ -1,64 +1,71 @@
-\function windowScroll() {
-    const navbar = document.getElementById("navbar");
-    if (
-        document.body.scrollTop >= 50 ||
-        document.documentElement.scrollTop >= 50
-    ) {
-        navbar.classList.add("nav-sticky");
+(function () {
+  "use strict";
+
+  /* =====================
+     STICKY NAVBAR
+  ===================== */
+  const navbar = document.getElementById("navbar");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 80) {
+      navbar.classList.add("sticky-active");
     } else {
-        navbar.classList.remove("nav-sticky");
+      navbar.classList.remove("sticky-active");
     }
-}
+  });
 
-window.addEventListener('scroll', (ev) => {
-    ev.preventDefault();
-    windowScroll();
-});
+  /* =====================
+     ACTIVE NAV LINK ON SCROLL
+  ===================== */
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
 
+  function activateNavLink() {
+    let scrollY = window.pageYOffset;
 
+    sections.forEach(section => {
+      const sectionHeight = section.offsetHeight;
+      const sectionTop = section.offsetTop - 120;
+      const sectionId = section.getAttribute("id");
 
-// swiper
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3,
-    centeredSlides: false,
-    spaceBetween: 30,
-    pagination: {
-        el: ".swiper-pagination",
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        navLinks.forEach(link => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${sectionId}`) {
+            link.classList.add("active");
+          }
+        });
+      }
+    });
+  }
 
-    breakpoints: {
-        320: {
-            slidesPerView: 1,
-            spaceBetween: 30,
-        },
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 40,
-        },
-        1024: {
-            slidesPerView: 3,
-            spaceBetween: 50,
-        },
-    },
-});
+  window.addEventListener("scroll", activateNavLink);
 
-// home-5
+  /* =====================
+     AUTO CLOSE MOBILE MENU
+  ===================== */
+  const navItems = document.querySelectorAll(".navbar-nav .nav-link");
+  const navbarCollapse = document.getElementById("navbarCollapse");
 
-var swiper = new Swiper(".homeSwiper", {
-    direction: "vertical",
-    mousewheel: true,
-    effect: "fade",
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-});
+  navItems.forEach(item => {
+    item.addEventListener("click", () => {
+      if (navbarCollapse.classList.contains("show")) {
+        new bootstrap.Collapse(navbarCollapse).hide();
+      }
+    });
+  });
 
+  /* =====================
+     MODAL VIDEO RESET
+  ===================== */
+  const modal = document.getElementById("exampleModal");
+  const video = document.getElementById("VisaChipCardVideo");
+
+  if (modal && video) {
+    modal.addEventListener("hidden.bs.modal", () => {
+      video.pause();
+      video.currentTime = 0;
+    });
+  }
+
+})();
