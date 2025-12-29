@@ -1,163 +1,227 @@
-/* =====================
-   GLOBAL STYLES
-===================== */
-:root {
-  --primary: #4f46e5;
-  --dark: #0f172a;
-  --light: #ffffff;
-  --muted: #64748b;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  color: var(--dark);
+  font-family: system-ui, sans-serif;
+  color: #0f172a;
   scroll-behavior: smooth;
 }
 
-/* =====================
-   NAVBAR
-===================== */
-.navbar-custom {
-  transition: all 0.3s ease;
-  background: transparent;
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
 }
 
-.navbar-custom.sticky-active {
-  background: #ffffff;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+.center {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-.navbar .nav-link {
+/* HEADER */
+.header {
+  position: fixed;
+  width: 100%;
+  background: white;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0,0,0,.05);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.logo span {
+  color: #2563eb;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #0f172a;
   font-weight: 500;
-  color: var(--dark);
-  margin: 0 10px;
-  position: relative;
 }
 
-.navbar .nav-link:hover,
-.navbar .nav-link.active {
-  color: var(--primary);
-}
-
-.navbar-toggler {
+.menu-btn {
+  display: none;
+  background: none;
   border: none;
+  font-size: 26px;
 }
 
-/* =====================
-   HERO SECTION
-===================== */
-.home-section {
-  background: linear-gradient(135deg, #4f46e5, #6366f1);
-  padding-top: 120px;
+/* HERO */
+.hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 
-.home-section .badge {
-  background: rgba(255,255,255,0.15);
+.slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease;
 }
 
-.phone-img {
-  max-width: 100%;
-  animation: float 4s ease-in-out infinite;
+.slide.active {
+  opacity: 1;
 }
 
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
-  100% { transform: translateY(0); }
+.hero-content {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
 }
 
-/* =====================
-   SECTIONS
-===================== */
+.hero h1 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+/* SECTIONS */
 .section {
-  padding: 80px 0;
+  padding: 100px 0;
 }
 
-.bg-services {
+/* ABOUT */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  gap: 40px;
+}
+
+.about img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+/* SERVICES */
+.services {
   background: #f8fafc;
 }
 
-.bg-features {
-  background: #ffffff;
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 30px;
 }
 
-.bg-blog {
-  background: #f8fafc;
-}
-
-/* =====================
-   SERVICE CARDS
-===================== */
 .service-card {
-  border-radius: 16px;
-  transition: all 0.3s ease;
-  height: 100%;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  transition: transform .3s, box-shadow .3s;
 }
 
 .service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 35px rgba(0,0,0,0.08);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,.1);
 }
 
-.service-icon {
-  width: 56px;
-  height: 56px;
-  background: rgba(79,70,229,0.1);
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.service-card i {
+  font-size: 40px;
+  color: #2563eb;
 }
 
-/* =====================
-   FEATURES
-===================== */
-.accordion-button {
-  font-weight: 500;
+/* FAQ */
+.faq-item {
+  max-width: 700px;
+  margin: 20px auto;
 }
 
-.accordion-button:not(.collapsed) {
-  background: transparent;
-  color: var(--primary);
+.faq-question {
+  width: 100%;
+  padding: 15px;
+  font-weight: 600;
+  border: none;
+  background: #e5e7eb;
+  cursor: pointer;
+  text-align: left;
 }
 
-/* =====================
-   BLOG
-===================== */
-.blog-img {
-  max-width: 100%;
-  transition: transform 0.3s ease;
+.faq-answer {
+  display: none;
+  padding: 15px;
+  background: #f8fafc;
 }
 
-.card:hover .blog-img {
-  transform: scale(1.05);
+/* FOOTER */
+.footer {
+  background: #0f172a;
+  color: white;
+  padding: 60px 0;
 }
 
-/* =====================
-   BUTTONS
-===================== */
-.btn-primary {
-  background: var(--primary);
-  border-color: var(--primary);
+.footer a {
+  color: #cbd5f5;
+  text-decoration: none;
+  display: block;
+  margin-top: 8px;
 }
 
-.btn-outline-primary {
-  color: var(--primary);
-  border-color: var(--primary);
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap: 30px;
 }
 
-.btn-outline-primary:hover {
-  background: var(--primary);
-  color: #fff;
+/* SCROLL TOP */
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  display: none;
+  cursor: pointer;
 }
 
-/* =====================
-   RESPONSIVE
-===================== */
-@media (max-width: 991px) {
-  .navbar-collapse {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 16px;
+/* MOBILE */
+@media(max-width:768px){
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    background: white;
+    flex-direction: column;
+    width: 250px;
+    height: calc(100vh - 70px);
+    padding: 30px;
+    transition: .3s;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .menu-btn {
+    display: block;
   }
 }
