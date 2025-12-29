@@ -1,37 +1,36 @@
-/* MOBILE MENU */
-const menuBtn = document.getElementById("menuBtn");
-const navMenu = document.getElementById("navMenu");
+/* MENU */
+menuBtn.onclick = () => navMenu.classList.toggle("active");
 
-menuBtn.onclick = () => {
-  navMenu.classList.toggle("active");
-};
-
-/* HERO CAROUSEL */
+/* CAROUSEL */
 const slides = document.querySelectorAll(".slide");
-let currentSlide = 0;
-
+let i = 0;
 setInterval(() => {
-  slides[currentSlide].classList.remove("active");
-  currentSlide = (currentSlide + 1) % slides.length;
-  slides[currentSlide].classList.add("active");
-}, 4000);
+  slides[i].classList.remove("active");
+  i = (i + 1) % slides.length;
+  slides[i].classList.add("active");
+}, 4500);
 
-/* FAQ TOGGLE */
-document.querySelectorAll(".faq-question").forEach(btn => {
-  btn.onclick = () => {
-    const answer = btn.nextElementSibling;
-    answer.style.display =
-      answer.style.display === "block" ? "none" : "block";
+/* FAQ */
+document.querySelectorAll(".faq-question").forEach(q => {
+  q.onclick = () => {
+    const a = q.nextElementSibling;
+    a.style.display = a.style.display === "block" ? "none" : "block";
   };
 });
 
-/* SCROLL TO TOP */
-const scrollTopBtn = document.getElementById("scrollTop");
-
+/* SCROLL TOP */
+const scrollBtn = document.getElementById("scrollTop");
 window.addEventListener("scroll", () => {
-  scrollTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+  scrollBtn.style.display = window.scrollY > 400 ? "block" : "none";
 });
+scrollBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
-scrollTopBtn.onclick = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};
+/* SCROLL REVEAL */
+const reveals = document.querySelectorAll(".reveal");
+window.addEventListener("scroll", () => {
+  reveals.forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+      el.classList.add("active");
+    }
+  });
+});
