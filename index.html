@@ -2,18 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Real Estate Landing Page</title>
+  <title>Modern Real Estate Landing Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Icons -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
 
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ================= HEADER ================= -->
 <header class="header">
   <div class="container nav">
     <div class="logo">REAL<span>ESTATE</span></div>
@@ -32,35 +30,38 @@
   </div>
 </header>
 
-<!-- ================= HERO / CAROUSEL ================= -->
+<!-- HERO -->
 <section class="hero" id="home">
+  <div class="overlay"></div>
+
   <div class="slides">
-    <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1568605114967-8130f3a36994')"></div>
-    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c')"></div>
-    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1605276373954-0c4a0dac5b12')"></div>
+    <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c')"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1568605114967-8130f3a36994')"></div>
   </div>
 
-  <div class="hero-content">
-    <h1>Your Dream Property Awaits</h1>
-    <p>Modern homes • Prime locations • Smart investments</p>
+  <div class="hero-content animate">
+    <h1>Find Your Dream Home</h1>
+    <p>Luxury • Comfort • Prime Locations</p>
+    <a href="#services" class="btn">Explore Services</a>
   </div>
 </section>
 
-<!-- ================= ABOUT ================= -->
-<section class="section about" id="about">
+<!-- ABOUT -->
+<section class="section about reveal" id="about">
   <div class="container grid">
-    <img src="https://images.unsplash.com/photo-1572120360610-d971b9b78825" alt="About Image">
+    <img src="https://images.unsplash.com/photo-1572120360610-d971b9b78825" alt="">
     <div>
-      <h2>About Us</h2>
+      <h2>About Our Company</h2>
       <p>
-        We specialize in residential and commercial real estate, helping
-        clients buy, sell, and invest with confidence and clarity.
+        We provide premium real estate services with a modern,
+        transparent and client-focused approach.
       </p>
     </div>
   </div>
 </section>
-<!-- ================= SERVICES ================= -->
-<section class="section services" id="services">
+
+<!-- SERVICES -->
+<section class="section services reveal" id="services">
   <div class="container">
     <h2 class="center">Our Services</h2>
 
@@ -68,74 +69,68 @@
       <div class="service-card">
         <i class="ri-home-4-line"></i>
         <h3>Property Sales</h3>
-        <p>Buying and selling residential and commercial properties.</p>
+        <p>Residential & commercial property transactions.</p>
       </div>
 
       <div class="service-card">
         <i class="ri-building-line"></i>
         <h3>Property Management</h3>
-        <p>Complete management services for landlords.</p>
+        <p>End-to-end management for landlords.</p>
       </div>
 
       <div class="service-card">
         <i class="ri-line-chart-line"></i>
-        <h3>Investment Consulting</h3>
-        <p>Smart strategies to grow your real estate portfolio.</p>
+        <h3>Investments</h3>
+        <p>Smart real estate investment strategies.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= FAQ ================= -->
-<section class="section faq" id="faq">
+<!-- FAQ -->
+<section class="section faq reveal" id="faq">
   <div class="container">
-    <h2 class="center">Frequently Asked Questions</h2>
+    <h2 class="center">FAQs</h2>
 
     <div class="faq-item">
-      <button class="faq-question">How do I get started?</button>
-      <div class="faq-answer">
-        Contact us and our team will guide you through every step.
-      </div>
+      <button class="faq-question">How do I start?</button>
+      <div class="faq-answer">Contact us and we’ll guide you.</div>
     </div>
 
     <div class="faq-item">
-      <button class="faq-question">Do you offer rental management?</button>
-      <div class="faq-answer">
-        Yes, we provide full rental and property management services.
-      </div>
+      <button class="faq-question">Do you manage rentals?</button>
+      <div class="faq-answer">Yes, full rental management available.</div>
     </div>
   </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 <footer class="footer" id="contact">
   <div class="container footer-grid">
     <div>
       <h3>REAL ESTATE</h3>
-      <p>Professional real estate solutions you can trust.</p>
+      <p>Modern property solutions.</p>
     </div>
 
     <div>
-      <h4>Quick Links</h4>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
+      <h4>Links</h4>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
     </div>
 
     <div>
       <h4>Contact</h4>
-      <p>Email: info@example.com</p>
-      <p>Phone: (000) 000-0000</p>
+      <p>info@example.com</p>
+      <p>(000) 000-0000</p>
     </div>
   </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
 <button class="scroll-top" id="scrollTop">
   <i class="ri-arrow-up-line"></i>
 </button>
 
-<!-- JS -->
 <script src="script.js"></script>
 </body>
 </html>
